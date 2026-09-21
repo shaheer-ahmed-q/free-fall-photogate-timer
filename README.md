@@ -37,3 +37,17 @@ Arduino-based dual photogate system for experimental measurement of gravitationa
 
 ![Bent ICSP Pin](03_bent_icsp_pin.jpeg)
 ![Component Inventory](04_component_inventory.jpeg)
+
+---
+
+### Entry 3: Gate 1 Wiring & Sensor Orientation
+- **Status:** Complete & Powered
+- **Hardware Setup:** Connected Gate 1 to breadboard power rails (5V/GND) and routed signal line to Digital Pin 2 on the Arduino Uno.
+- **Circuit Adjustments & Physical Constraints:**
+  - *Sensor Orientation:* Oriented the photogate facing outward to ensure breadboard columns remain accessible for jumper connections behind the header.
+  - *Jumper Allocation:* Required 1 additional 20cm M-M jumper wire for rail distribution beyond the initial count.
+- **Power Verification:** Verified onboard status LED on photogate module illuminates upon USB power connection.
+
+![Gate 1 Wiring Setup](05_gate1_wiring.jpeg)
+
+- **Next Step:** Upload single-sensor test script and verify interrupt/signal state in Serial Monitor.
