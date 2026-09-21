@@ -51,3 +51,19 @@ Arduino-based dual photogate system for experimental measurement of gravitationa
 ![Gate 1 Wiring Setup](05_gate1_wiring.jpeg)
 
 - **Next Step:** Upload single-sensor test script and verify interrupt/signal state in Serial Monitor.
+
+
+### Entry 4: Diagnostic Code Upload, IDE Setup & Sensor Verification
+- **Status:** Verified & Complete
+- **Software Setup:** Created and compiled `sensor_test.ino` targeting the Arduino Uno board (Digital Pin 2).
+- **Environment & Troubleshooting Hurdles:**
+  - *Board / FQBN Selection:* Fixed initial compilation failure by explicitly selecting the `Arduino Uno` target board and matching COM port in Arduino IDE 2.x.
+  - *Keyboard Layout Discrepancies:* Encountered keymapping mismatches while typing out the script manually on a physical UK QWERTY keyboard operating under a US software keymap (causing symbol misalignments like quotes and semicolons).
+  - *Syntax Debugging:* Diagnosed and resolved a missing semicolon line error (`expected ';' before...`) directly inside the IDE compiler output before finalizing the sketch.
+- **Signal Logic Verification:**
+  - **Unblocked State:** `LOW` ($0$) — Infrared beam hits the photo-transistor uninterrupted.
+  - **Blocked State:** `HIGH` ($1$) — Object interrupts the beam path.
+
+![Gate 1 Test Code](06_gate1_code.jpeg)
+
+- **Next Step:** Assemble Gate 2 hardware module on the breadboard and write the two-gate interrupt timing code.
